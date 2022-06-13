@@ -2,14 +2,14 @@
 <div class="login-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="#" class="h1">Sistema Ventas y Compras</a>
+      <a href="#" class="h3">Sistema Ventas y Compras</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Identifíquese para iniciar sesión</p>
 
-      <form action="#" method="post">
+      <form [formGroup]="form" (ngSubmit)="loginForm()">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Usuario">
+          <input formControlName="usuario" type="email" class="form-control" placeholder="Usuario">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Contraseña">
+          <input formControlName="clave" type="password" class="form-control" placeholder="Clave">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
