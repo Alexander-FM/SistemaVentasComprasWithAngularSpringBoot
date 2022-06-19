@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from "@angular/platform-browser";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {UsuarioServiceService} from "./service/usuario-service.service";
+import {UsuarioServiceService} from "../../services/loginService/usuario-service.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
