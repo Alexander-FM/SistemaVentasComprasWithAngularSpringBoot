@@ -4,7 +4,6 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {UsuarioServiceService} from "../../services/loginService/usuario-service.service";
 import Swal from 'sweetalert2'
 import {Router} from "@angular/router";
-import {error} from "@angular/compiler-cli/src/transformers/util";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,7 +24,7 @@ export class AppComponent implements OnInit{
   }
 
   loginForm(){
-    var formData: any = new FormData();
+    const formData: any = new FormData();
     formData.append('usuario', this.form.get('usuario')?.value);
     formData.append('clave', this.form.get('clave')?.value);
     this.service.login(formData).subscribe(() => {
