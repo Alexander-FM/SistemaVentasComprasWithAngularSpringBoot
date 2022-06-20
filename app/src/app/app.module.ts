@@ -8,6 +8,10 @@ import { StartComponent } from './components/start/start.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { MarcaComponent } from './components/marca/marca.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { AppRoutingModule} from "./app-routing.module";
+import { NavbarComponent } from './components/start/navbar/navbar.component';
+import { AsideComponent } from './components/start/aside/aside.component';
+import { FooterComponent } from './components/start/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,14 @@ import { ProductoComponent } from './components/producto/producto.component';
     StartComponent,
     CategoriaComponent,
     MarcaComponent,
-    ProductoComponent
+    ProductoComponent,
+    NavbarComponent,
+    AsideComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
