@@ -1,0 +1,59 @@
+<!-- /.login-logo -->
+<div class="login-box">
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <a href="#" class="h3">Sistema Ventas y Compras</a>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">Identifíquese para iniciar sesión</p>
+
+      <form [formGroup]="form" (ngSubmit)="loginForm()">
+        <div class="input-group mb-3">
+          <input formControlName="usuario" type="email" class="form-control" placeholder="Usuario">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input formControlName="clave" type="password" class="form-control" placeholder="Clave">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Recuérdame
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión <i class="fas fa-sign-in-alt ml-2"></i></button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center mt-2 mb-3">
+        <a href="#" class="btn btn-block btn-primary">
+          {{ mensajeInicio }} <i class="fas fa-solid fa-info ml-2"></i>
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a href="forgot-password.html">Olvidé mi contraseña </a>
+      </p>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+<!-- /.login-box -->
